@@ -5,6 +5,18 @@ title
 
 /*
 ------------------------------------------------------------*/
-.c-title1 {
-	
+.c-title {
+    font-family: $oswald-fonts;
+    font-size: 4.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #000;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 58px;
+        height: 1px;
+        background-color: #231815;
+    }
 }

@@ -7,14 +7,21 @@ body {
     @include sp {
         min-width: 320px;
     }
-    font-feature-settings: "palt";
+    // font-feature-settings: "palt";
 }
 //-------------------------------------------------------
 
 
 //-------------------------------------------------------
 .l-container {
-    width: $base-width;
+    max-width: $base-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.l-container__w1580 {
+    width: 100%;
+    max-width: 1580px;
     margin: 0 auto;
 }
 
@@ -22,4 +29,15 @@ body {
     width: 100%;
     max-width: 434px;
     margin: 0 auto;
+}
+
+.l-container__w1740 {
+    width: 100%;
+    max-width: 1740px;
+    margin: 0 auto;
+}
+
+.l-card01__inner {
+    width: 100%;
+    padding: 22px 22px 20px 20px;
 }
