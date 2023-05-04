@@ -11,6 +11,7 @@ title
     font-weight: 400;
     letter-spacing: 0.1em;
     color: #000;
+    position: relative;
 
     &::after {
         content: "";
@@ -18,5 +19,11 @@ title
         width: 58px;
         height: 1px;
         background-color: #231815;
+    }
+
+    &.u-center::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

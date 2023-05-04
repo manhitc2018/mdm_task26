@@ -495,6 +495,7 @@
     max-width: 1920px;
     margin: 0 auto;
     padding-top: 8px;
+    padding-bottom: 111px;
 
     .c-design__slider {
         width: 96%;
@@ -513,7 +514,7 @@
 
     .c-control {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
     }
 
     .c-control__item {
@@ -574,4 +575,270 @@
     }
     
     
+}
+
+.c-plan {
+    padding-bottom: 93px;
+
+    .c-plan__title {
+        transform: translateX(6px);
+        margin-bottom: 87px;
+    }
+
+    .c-plan__title.c-title.u-center::after {
+        bottom: -13px;
+    }
+
+    .c-plan__design {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        position: relative;
+        margin-bottom: 76px;
+    }
+
+    .c-plan__imageItem {
+        &:nth-child(1) {
+            transform: translate(44px, 2px);
+
+            .c-plan__designImgNumber {
+                bottom: -29px;
+                left: calc(5% - -1px);
+            }
+        }
+
+        &:nth-child(2) {
+            transform: translate(86px, 8px);
+
+            .c-plan__designImgNumber {
+                bottom: -23px;
+                left: calc(5% + 3px);
+
+            }
+        }
+    }
+
+    .c-plan__designImgNumber {
+        position: absolute;
+    }
+
+    .c-plan__parameter {
+        display: flex;
+        justify-content: center;
+        transform: translateX(12px);
+        margin-bottom: 91px;
+        
+    }
+
+    .c-plan__parameterItem {
+        display: flex;
+        font-family: $main-fonts;
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: #231815;
+        font-feature-settings: "palt";
+        margin-left: 41px;
+
+        &:nth-child(1) {
+            margin-left: 0;
+
+            .c-plan__parameterNumber {
+                margin-left: 27px;
+            }
+        }
+
+    }
+
+    
+
+    .c-plan__parameterNumber {
+        margin-left: 21px;
+    }
+
+    .c-plan__specifical {
+        padding: 0 20px;
+        margin-left: 5px;
+    }
+
+    .c-plan__specificalItem {
+        display: flex;
+        border-bottom: 1px solid #cbcbcb;
+        padding-bottom: 5px;
+        padding-top: 24px;
+
+        &:nth-child(1) {
+            .c-plan__specificalContent {
+                letter-spacing: 0.05em;
+            }
+        }
+
+    }
+
+    .c-plan__specificalTitle {
+        font-family: $main-fonts;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #231815;
+        width: 23%;
+        font-feature-settings: "palt";
+        padding-left: 10px;
+        
+
+    }
+
+    .c-plan__specificalContent {
+        font-family: $main-fonts;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #231815;
+        padding-left: 13px;
+    }
+
+    .c-specifical__tagItem {
+        border: 1px solid #cbcbcb;
+        border-radius: 3px;
+        margin-right: 19px;
+
+    }
+
+    .c-plan__tag5 {
+        &:nth-child(1) {
+            padding: 7px 4px 9px 18px;
+
+            .c-specifical__tagText {
+                letter-spacing: 0.04em;
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            padding: 7px 14px 9px 18px;
+        }
+
+        &:nth-child(4) {
+            padding: 7px 14px 9px;
+        }
+
+        &:nth-child(5) {
+            padding: 7px 18px 9px 14px;
+        }
+    }
+
+    .c-plan__tag3 {
+        padding: 7px 16px 9px 17px;
+
+        &:nth-child(2) {
+            padding: 7px 13px 9px 19px;
+        }
+    }
+
+    .c-specifical__tagText {
+        font-family: $main-fonts;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #231815;
+        font-feature-settings: "palt";
+        line-height: 2.1;
+    }
+
+}
+
+.c-finance {
+    padding-top: 82px;
+    padding-bottom: 110px;
+    background-color: #ededed;
+
+    .c-finance__title {
+        transform: translateX(14px);
+        margin-bottom: 71px;
+    }
+
+    .c-title::after {
+        bottom: -14px;
+    }
+
+    .c-finance__subtitle {
+        width: 100%;
+        max-width: 410px;
+        height: 65px;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        background-color: #231815;
+        transform: translateX(17px);
+        margin-bottom: 48px;
+
+    }
+
+    .c-finance__subtitleText {
+        font-family: $main-fonts;
+        font-size: 3rem;
+        font-weight: 400;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        transform: translate(0, -5px);
+        letter-spacing: 0.02em;
+    }
+
+    .c-finance__row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 22px;
+    }
+
+    .c-finance__item {
+        width: 48%;
+        max-width: 605px;
+        background-color: #fff;
+    }
+
+    .c-finance__inner {
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 100px 10px 55px;
+    }
+
+    .c-finance__content {
+        font-family: $main-fonts;
+        font-size: 2.2rem;
+        font-weight: 400;
+        color: #231815;
+        letter-spacing: -0.5px;
+        margin-bottom: 25px;
+    }
+
+    .c-finance__itemTitle {
+        font-family: $main-fonts;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #231815;
+        transform: translate(5px, -5px);
+
+    }
+
+    .c-finance__cost {
+        font-family: $main-fonts;
+        font-size: 9rem;
+        font-weight: 700;
+        color: #7a89a8;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+
+        .c-finance__unit {
+            font-size: 3.6rem;
+            margin-left: 10px;
+
+        }
+    }
+
+    .c-finance__text {
+        font-family: $main-fonts;
+        font-size: 2.2rem;
+        font-weight: 400;
+        color: #231815;
+        
+    }
 }
