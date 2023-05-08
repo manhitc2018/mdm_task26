@@ -2,8 +2,39 @@
 footer
 ------------------------------------------------------------*/
 .c-footer {
-    padding: 20px;
-    background: #051a2b;
-    color: #fff;
-    text-align: center;
+    padding-top: 87px;
+
+    .c-footer__form01 {
+        margin-bottom: 91px;
+        padding: 0 20px 0 24px;
+    }
+
+    .c-footer__form02 {
+        display: flex;
+        padding: 0 20px 0 24px;
+        text-align: center;
+    }
+
+    .c-footer__form02Title {
+        font-family: $oswald-fonts;
+        font-size: 4.8rem;
+        font-weight: 400;
+        color: #000;
+        letter-spacing: 0.09em;
+        transform: translateX(-5px);
+
+    }
+
+    .c-footer__form02Content {
+        padding: 106px 0 100px;
+        width: 100%;
+        border: 1px solid #000;
+    }
+
+    .c-footer__logo {
+        text-align: center;
+        margin-top: 86px;
+        margin-bottom: 84px;
+    }
+    
 }
