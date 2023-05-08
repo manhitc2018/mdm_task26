@@ -89,6 +89,12 @@
             height: 100vh;
             min-height: 850px;
         }
+        @include sp {
+            background-image: url(../../assets/img/banner-sp.jpg);
+            height: auto;
+            min-height: 100px;
+            padding-top: 109%;
+        }
     }
 
     .c-mainvisual__content {
@@ -99,11 +105,21 @@
         left: calc(50% - -17px);
         transform: translate(-50%, -50%);
         text-align: center;
+        @include sp {
+            top: calc(50% + -17px);
+            left: calc(50% + -1px);
+        }
     }
 
     .c-mainvisual__groupImglogo {
         padding-top: 115px;
         margin-bottom: 59px;
+        @include sp {
+            width: 115px;
+            margin: auto;
+            padding-top: 57px;
+            padding-bottom: 31px;
+        }
     }
 
     .c-mainvisual__slogan {
@@ -115,16 +131,31 @@
         margin-bottom: 40px;
         letter-spacing: -2.5px;
         transform: translate(-11px, -3px);
+        @include sp {
+            font-size: 1rem;
+            letter-spacing: -1px;
+            transform: translate(-4px, -3px);
+            margin-bottom: 21px;
+        }
     }
 
     .c-mainvisual__slogan--special {
         letter-spacing: -1.5px;
         margin-right: -6px;
+        @include sp {
+            letter-spacing: -0.6px;
+        }
     }
 
     .c-mainvisual__groupImgOpen {
         padding-bottom: 81px;
         transform: translate(5px, -3px);
+        @include sp {
+            width: 162px;
+            margin: 0 auto;
+            transform: translate(10px, -4px);
+            padding-bottom: unset;
+        }
     }
 
 }
@@ -137,6 +168,9 @@
 
 .c-case {
     padding: 82px 0 90px;
+    @include sp {
+        padding: 50px 0 90px;
+    }
 
     .c-case__title {
         font-family: $main-fonts;
@@ -146,6 +180,11 @@
         transform: translateX(16px);
         color: #000;
         margin-bottom: 30px;
+        @include sp {
+            font-size: 1.5rem;
+            transform: unset;
+            margin-bottom: 13px;
+        }
     }
 
     .c-case__group {
@@ -160,6 +199,12 @@
         @include pc1200 {
             margin-left: -30px;
         }
+        @include sp {
+            padding: 0 16px;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
     }
 
     .c-case__item {
@@ -171,40 +216,98 @@
             width: calc(33.33% - 30px);
             margin-left: 30px;
         }
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 19px;
+        }
 
         &:nth-child(1) {
             .c-case__bottom {
                 margin-left: 2px;
+                @include sp {
+                    margin-left: 15px;
+                }
             }
         }
 
         &:nth-child(2) {
             margin-left: 57px;
+            align-items: flex-end;
             @include pc1200 {
                 margin-left: 30px;
+            }
+            @include sp {
+                margin-left: 0;
+            }
+
+            .c-case__top {
+                @include sp {
+                    margin-left: 0;
+                    transform: translate(-8px, -1px);
+                }
+            }
+
+            .c-case__bottom {
+                &::before {
+                    @include sp {               
+                        left: calc(60% + 15px);
+                        clip-path: polygon(83% 0, 15% 100%, 100% 100%);
+                    }
+                }
+                @include sp {
+                    transform: translate(0, -4px);
+                }
+                
             }
 
             .c-case__bottomSub {
                 letter-spacing: -1.3px;
+                @include sp {
+                    letter-spacing: -1.5px;
+                    left: -5px;
+                    top: -9px;
+                    right: unset;
+                }
             }
 
             .c-case__bottomSubtext {
                 transform: translate(-2px, -1px);
             } 
+
+        
+            .c-case__bottomContent {
+                @include sp {
+                    transform: translate(-3px, 0);
+                }
+                
+            }
         }
 
         &:nth-child(3) {
             .c-case__bottomContent {
                 letter-spacing: -0.3px;
                 transform: translateX(-7px);
+                @include sp {
+                    transform: translateX(-4px);
+                    letter-spacing: unset;
+                }
             }
 
             .c-case__bottomSub {
                 right: -7px;
+                @include sp {
+                    right: -6px;
+                    top: -9px;
+                    letter-spacing: -1px;
+                }
             }
 
             .c-case__bottomSubtext {
                 transform: translateX(2px);
+                @include sp {
+                    transform: translateX(1px);
+                }
                 
             }
         }
@@ -215,6 +318,9 @@
         position: relative;
         width: max-content;
         margin-left: 22px;
+        @include sp {
+            margin-left: 30px;
+        }
     }
 
     .c-case__topNumber {
@@ -223,6 +329,10 @@
         font-weight: 700;
         line-height: 1;
         color: #ededed;
+        @include sp {
+            font-size: 14.8rem;
+            
+        }
     }
 
     .c-case__topText {
@@ -233,6 +343,9 @@
         font-size: 2.4rem;
         color: #c7c7c7;
         letter-spacing: 0.25em;
+        @include sp {
+            font-size: 1.7rem;
+        }
     }
 
     .c-case__bottom {
@@ -242,6 +355,10 @@
         transform: translateY(-3px);
         border-radius: 8px;
         flex: 1;
+        @include sp {
+            width: calc(100% - 15px);
+            margin-left: 15px;
+        }
         
 
         &::before {
@@ -258,6 +375,13 @@
                 top: -25px;
                 left: calc(23% + 5px);
             }
+            @include sp {
+                top: -20px;
+                left: calc(23% + 15px);
+                width: 23px;
+                height: 26px;
+                clip-path: polygon(28% 0, 15% 100%, 100% 100%);
+            }
         }
     }
 
@@ -268,6 +392,11 @@
         padding: 39px 10px;
         font-feature-settings: "palt";
         transform: translateX(-3px);
+        @include sp {
+            font-size: 1.65rem;
+            padding: 27px 10px;
+            transform: translateX(-1px);
+        }
     }
 
     .c-case__bottomSub {
@@ -283,6 +412,12 @@
         height: 35px;
         border-radius: 20px;
         text-align: center;
+        @include sp {
+            font-size: 1.3rem;
+            width: 146px;
+            height: 25px;
+
+        }
     }
 }
 
@@ -439,7 +574,7 @@
             top: calc(-22% - 6px);
             right: calc(-11% - 0px);
             transform: translate(-50%, -50%);
-            background-image: url(../_public/assets/img/icon_merit_text.png);
+            background-image: url(../assets/img/icon_merit_text.png);
         }
     }
 

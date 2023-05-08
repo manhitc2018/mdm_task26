@@ -29,6 +29,10 @@ body {
     width: 100%;
     max-width: 434px;
     margin: 0 auto;
+    @include sp {
+        max-width: 217px;
+        height: 231px;
+    }
 }
 
 .l-container__w1740 {
