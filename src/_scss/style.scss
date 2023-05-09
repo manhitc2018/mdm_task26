@@ -169,7 +169,7 @@
 .c-case {
     padding: 82px 0 90px;
     @include sp {
-        padding: 50px 0 90px;
+        padding: 50px 0 25px;
     }
 
     .c-case__title {
@@ -424,6 +424,9 @@
 // detail case
 .c-detail {
     padding-top: 36px;
+    @include sp {
+        padding-bottom: 2px;
+    }
 
     .c-detail__title {
         font-family: $main-fonts;
@@ -437,6 +440,13 @@
             font-size: 3rem;
             transform: unset;
         }
+        @include sp {
+            font-size: 1.3rem;
+            max-width: 230px;
+            margin: 0 auto;
+            line-height: 1.23;
+            transform: translate(1px, 0);
+        }
 
         .c-detail__title--spec {
             font-family: $serif-fonts;
@@ -444,6 +454,13 @@
             font-weight: 400;
             color: #252a6d;
             margin-left: 4px;
+            @include sp {
+                font-size: 1.7rem;
+                display: inline-block;
+                transform: translate(-3px, 1px);
+                letter-spacing: 0.02em;
+            }
+
         }
     }
 
@@ -455,6 +472,13 @@
         letter-spacing: 0.097em;
         transform: translateX(20px);
         margin-bottom: 64px;
+        @include sp {
+            font-size: 1.25rem;
+            padding-top: 5px;
+            letter-spacing: 0.053em;
+            transform: unset;
+            margin-bottom: 31px;
+        }
     }
 
     .c-merit__group {
@@ -466,11 +490,35 @@
     .c-merit__item {
         justify-content: space-between;
         margin-bottom: 94px;
+        @include sp {
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
 
         &:nth-child(3) {
+            @include sp {
+                .c-merit__ContentImg {
+                    transform: translate(17px, -23px);
+                }
+
+                .c-merit__contentGroup {
+                    margin-left: 58px;
+                }
+
+                .c-merit__itemTitle--spec {
+                    margin-left: -3px;
+                    margin-right: -2px;
+
+                }
+            }
+            
             .c-merit__itemTitle {
                 margin-top: -3px;
                 margin-bottom: 32px;
+                @include sp {
+                    margin-bottom: 16px;
+                }
 
                 &::after {
                     top: calc(-18% - 6px);
@@ -480,6 +528,10 @@
 
             .c-merit__itemText {
                 max-width: 531px;
+                @include sp {
+                    max-width: 261px;
+                    letter-spacing: -0.01em;
+                }
             }
         }
     }
@@ -489,15 +541,28 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         margin-bottom: 91px;
+        @include sp {
+            flex-direction: column;
+            padding-top: 36px;
+            margin-bottom: 53px;
+        }
 
         .c-merit__images {
             margin-left: 27px;
+            @include sp {
+                margin-left: inherit;
+                padding-top: 14px;
+            }
         }
 
         .c-merit__ContentImg {
             transform: translate(59px, -28px);
             @include pc1200 {
                 transform: translate(30px, -28px);
+            }
+            @include sp {
+                transform: translate(17px, -7px);
+
             }
         }
 
@@ -506,14 +571,24 @@
             @include pc1500 {
                 transform: unset;
             }
+            @include sp {
+                margin-left: 58px;
+            }
         }
 
         .c-merit__itemTitle {
             margin-bottom: 32px;
+            @include sp {
+                margin-bottom: 16px;
+            }
 
             .c-merit__itemTitle--spec {
                 margin-left: -7px;
                 margin-right: -8px;
+                @include sp {
+                    margin-left: -4px;
+                    margin-right: -4px;
+                }
             }
 
             &::after {
@@ -524,6 +599,10 @@
 
         .c-merit__itemText {
             max-width: 522px;
+            @include sp {
+                max-width: 260px;
+                letter-spacing: -0.01em;
+            }
         }
     }
 
@@ -533,6 +612,10 @@
 
     .c-merit__ContentImg {
         transform: translate(25px, -29px);
+        @include sp {
+            width: 45px;
+            transform: translate(23px, -20px);
+        }
     }
 
     .c-merit__contentGroup {
@@ -541,11 +624,19 @@
         @include pc1200 {
             margin-left: 30px;
         }
+        @include sp {
+            margin-left: 64px;
+        }
     }
 
     .c-merit__images {
         width: 44%;
         max-width: 531px;
+        @include sp {
+            width: calc(100% - 44px);
+            margin: 0 auto;
+            margin-top: 1px;
+        }
     }
 
     .c-merit__itemTitle {
@@ -557,12 +648,21 @@
         margin-bottom: 30px;
         position: relative;
         max-width: max-content;
+        @include sp {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
 
         .c-merit__itemTitle--spec {
             font-size: 3.6rem;
             color: #252a6d;
             margin-left: -6px;
             margin-right: -5px;
+            @include sp {
+                font-size: 1.8rem;
+                margin-left: -2px;
+                margin-right: -3px;
+            }
         }
 
         &::after {
@@ -585,7 +685,13 @@
         color: #231815;
         letter-spacing: 0.033em;
         max-width: 510px;
-        line-height: 1.61;   
+        line-height: 1.61;
+        @include sp {
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.53;
+            max-width: 250px;
+        } 
     }
 }
 
@@ -612,6 +718,13 @@
         @include pc1200 {
             max-width: 400px;
         }
+        @include sp {
+            max-width: 216px;
+            top: unset;
+            left: unset;
+            bottom: calc(-5% - 8px);
+            right: calc(0% + -4px);
+        }
     }
 
     .c-recommend__groupTitle {
@@ -623,6 +736,10 @@
             right: 1%;
             top: -9%;
             transform: unset;
+        }
+        @include sp {
+            right: calc(5% - 5px);
+            top: calc(-1% - 13px);
         }
 
     }
@@ -641,6 +758,11 @@
         @include pc1200 {
             font-size: 5.9rem;
         }
+        @include sp {
+            font-size: 3.1rem;
+            letter-spacing: 0.09em;
+            margin-bottom: -2px;
+        }
 
     }
 
@@ -653,6 +775,9 @@
         @include pc1200 {
             font-size: 3rem;
         }
+        @include sp {
+            font-size: 1.3rem;
+        }
 
         .c-recommend__subtitle--spec {
             font-family: $serif-fonts;
@@ -660,14 +785,21 @@
             font-size: 4.6rem;
             color: #252a6d;
             margin-left: -8px;
+            @include sp {
+                font-size: 1.7rem;
+                transform: translate(4px, 0);
+                display: inline-block;
+            }
         }
     }
 
     .c-card__body {
         padding: 148px 20px 77px;
         max-width: 1660px;
-        
         margin: 0 auto;
+        @include sp {
+            padding: 74px 11px 117px;
+        }
     }
 
     .c-card01__row {
@@ -677,7 +809,56 @@
         @include pc1500 {
             padding: unset;
         }
+        @include sp {
+            flex-wrap: wrap;
+            gap: 9px;
+        }
         
+    }
+
+    .c-card01__item {
+        &:nth-child(3) {
+            @include sp {
+                .l-card01__inner {
+                    padding: 10px 8px;
+                }
+
+                .c-card01__img {
+                    padding: 0 2px;
+                }
+
+                .c-card01__title {
+                    transform: translate(2px, 0);
+                    margin-bottom: 3px;
+                    
+                }
+
+                .c-card01__text.c-card01__textsp {
+                    display: block;
+                }
+
+                .c-card01__text {
+                    padding-left: 3px;
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            .c-card01__text.c-card01__textsp {
+                display: block;
+            }
+
+            .c-card01__text {
+                display: none;
+            }
+        }
+        @include sp {
+            width: calc(49% - 1px);
+            margin-bottom: 6px;
+        }
+        
+
     }
 
     .l-card01__inner {
@@ -693,8 +874,16 @@
         margin-top: 17px;
         margin-bottom: 7px;
         // transform: translateX(-2px);
+        @include sp {
+            font-size: 1.1rem;
+            margin-top: 7px;
+            margin-bottom: 2px;
+        }
 
+    }
 
+    .c-card01__text.c-card01__textsp {
+        display: none;
     }
 
     .c-card01__text {
@@ -714,6 +903,14 @@
         @include pc1200 {
             -webkit-line-clamp: 9;
         }
+        @include sp {
+            font-size: 1rem;
+            letter-spacing: -0.051em;
+            width: calc(100% - 4px);
+            line-height: 1.3;
+            padding-left: 1px;
+            margin-bottom: 7px;
+        }
     }
 }
 
@@ -722,6 +919,9 @@
     justify-content: center;
     padding-top: 120px;
     padding-bottom: 115px;
+    @include sp {
+        padding: 61px 28px 42px;
+    }
 }
 
 
@@ -733,6 +933,9 @@
     padding-top: 8px;
     padding-bottom: 111px;
     position: relative;
+    @include sp {
+        padding-bottom: 43px;
+    }
 
     &::before {
         position: absolute;
@@ -744,6 +947,11 @@
         right: 0;
         top: calc(42% - 4px);
         z-index: -1;
+        @include sp {
+            width: 52%;
+            height: 257px;
+            top: calc(24% - 2px);
+        }
     }
 
     .c-design__slider {
@@ -753,25 +961,40 @@
 
     .c-design__sliderContent {
         margin-bottom: 36px;
+        @include sp {
+            margin-bottom: 11px;
+        }
     }
 
     .c-design__img {
         width: 100%;
         height: 683px;
         object-fit: cover;
+        @include sp {
+            height: 201px;
+        }
     }
 
     .c-control {
         display: flex;
         justify-content: flex-end;
+        @include sp {
+            margin-right: 2px;
+        }
     }
 
     .c-control__item {
         cursor: pointer;
+        @include sp {
+            width: 32px;
+        }
     }
 
     .c-control__itemPre {
         margin-right: 20px;
+        @include sp {
+            margin-right: 11px;
+        }
     }
 
     .c-design__body {
@@ -785,6 +1008,11 @@
             padding-left: 20px;
             padding-right: 20px; 
         }
+        @include sp {
+            flex-direction: column;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
     }
 
@@ -794,14 +1022,23 @@
             width: 60%;
             margin-right: 30px;
         }
+        @include sp {
+            width: 100%;
+        }
     }
 
     .c-design__title {
         transform: translate(14px, -24px);
         margin-bottom: 2px;
+        @include sp {
+            transform: translate(17px, 1px);
+        }
 
         &::after {
             margin-top: 14px;
+            @include sp {
+                margin-top: 7px;
+            }
         }
     }
 
@@ -813,7 +1050,13 @@
         color: #231815;
         margin-left: 14px;
         margin-bottom: 36px;
-
+        @include sp {
+            font-size: 1.4rem;
+            margin-left: 16px;
+            margin-bottom: 16px;
+            margin-top: 14px;
+            letter-spacing: -0.033em;
+        }
     }
 
     .c-design__text {
@@ -823,12 +1066,24 @@
         line-height: 1.79;
         color: #231815;
         margin-left: 14px;
+        @include sp {
+            font-size: 1rem;
+            line-height: 1.77;
+            margin-left: 15px;
+            transform: translate(1px, 0);
+        }
     }
 
     .c-design__video {
         width: 702px;
         height: 391px;
         margin-top: 103px;
+        @include sp {
+            width: 100%;
+            max-width: 303px;
+            max-height: 168px;
+            margin: 48px auto 0;
+        }
     }
     
     
@@ -836,14 +1091,24 @@
 
 .c-plan {
     padding-bottom: 93px;
+    @include sp {
+        padding-bottom: 69px;
+    }
 
     .c-plan__title {
         transform: translateX(6px);
         margin-bottom: 87px;
+        @include sp {
+            transform: unset;
+            margin-bottom: 30px;
+        }
     }
 
     .c-plan__title.c-title.u-center::after {
         bottom: -13px;
+        @include sp {
+            bottom: -6px;
+        }
     }
 
     .c-plan__design {
@@ -852,6 +1117,11 @@
         padding: 0 20px;
         position: relative;
         margin-bottom: 76px;
+        @include sp {
+            padding: 0 5px;
+            margin-bottom: 47px;
+        }
+        
     }
 
     .c-plan__imageItem {
@@ -862,10 +1132,16 @@
             @include pc1800 {
                 transform: translate(0, 0);
             }
+            @include sp {
+                transform: translate(6px, -1px);
+            }
 
             .c-plan__designImgNumber {
                 bottom: -29px;
                 left: calc(5% - -1px);
+                @include sp {
+                    bottom: -26px;
+                }
             }
         }
 
@@ -878,13 +1154,20 @@
             .c-plan__designImgNumber {
                 bottom: -23px;
                 left: calc(5% + 3px);
-
+                @include sp {
+                    bottom: -29px;
+                    left: calc(16% + 2px);
+                }
             }
         }
     }
 
     .c-plan__designImgNumber {
         position: absolute;
+        @include sp {
+            width: 26px;
+            height: 26px;
+        }
     }
 
     .c-plan__parameter {
@@ -894,6 +1177,11 @@
         margin-bottom: 91px;
         @include pc1200 {
             transform: unset;
+        }
+        @include sp {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
         }
         
     }
@@ -906,12 +1194,20 @@
         color: #231815;
         font-feature-settings: "palt";
         margin-left: 41px;
+        @include sp {
+            font-size: 1.2rem;
+            margin-left: 0;
+            line-height: 1.75;
+        }
 
         &:nth-child(1) {
             margin-left: 0;
 
             .c-plan__parameterNumber {
                 margin-left: 27px;
+                @include sp {
+                    margin-left: 12px;
+                }
             }
         }
 
@@ -921,11 +1217,18 @@
 
     .c-plan__parameterNumber {
         margin-left: 21px;
+        @include sp {
+            margin-left: 10px;
+        }
     }
 
     .c-plan__specifical {
         padding: 0 20px;
         margin-left: 5px;
+        @include sp {
+            padding: 0 15px;
+            margin-left: 0;
+        }
     }
 
     .c-plan__specificalItem {
@@ -933,10 +1236,29 @@
         border-bottom: 1px solid #cbcbcb;
         padding-bottom: 5px;
         padding-top: 24px;
+        @include sp {
+            padding-bottom: 1px;
+            padding-top: 12px;
+            align-items: center;
+        }
 
         &:nth-child(1) {
             .c-plan__specificalContent {
                 letter-spacing: 0.05em;
+            }
+        }
+
+        &:nth-child(3) {
+            @include sp {
+                padding-top: 2px;
+                padding-bottom: 4px;
+            }
+        }
+
+        &:nth-child(4) {
+            @include sp {
+                padding-top: 4px;
+                padding-bottom: 8px;
             }
         }
 
@@ -950,7 +1272,12 @@
         width: 23%;
         font-feature-settings: "palt";
         padding-left: 10px;
-        
+        @include sp {
+            font-size: 1.3rem;
+            padding-left: 5px;
+            width: 34%;
+            min-width: 98px;
+        }
 
     }
 
@@ -960,27 +1287,54 @@
         font-weight: 300;
         color: #231815;
         padding-left: 13px;
+        @include sp {
+            font-size: 1.3rem;
+            padding-left: 10px;
+        }
     }
 
     .c-specifical__tagItem {
         border: 1px solid #cbcbcb;
         border-radius: 3px;
         margin-right: 19px;
+        @include sp {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 4px;
+        }
 
+    }
+
+    .c-plan__specificaltag {
+        @include sp {
+            max-width: 222px;
+            padding-left: 6px;
+            margin-bottom: 2px;
+        }
     }
 
     .c-plan__tag5 {
         &:nth-child(1) {
-            padding: 7px 4px 9px 18px;
+            padding: 3px 3px 3px 7px;
+            @include sp {
+                padding: 3px 3px 3px 7px;
+                transform: translate(-1px, 2px);
+            }
 
             .c-specifical__tagText {
                 letter-spacing: 0.04em;
+                @include sp {
+                    letter-spacing: 0;
+                }
             }
         }
 
         &:nth-child(2),
         &:nth-child(3) {
             padding: 7px 14px 9px 18px;
+            @include sp {
+                padding: 3px 5px 3px 7px;
+            }
         }
 
         &:nth-child(4) {
@@ -990,13 +1344,40 @@
         &:nth-child(5) {
             padding: 7px 18px 9px 14px;
         }
+        @include sp {
+            &:nth-child(2) {
+                transform: translate(-1px, 2px);
+            }
+
+            &:nth-child(3) {
+                transform: translate(0, -4px);
+            }
+
+            &:nth-child(4) {
+                padding: 3px 5px 4px;
+                transform: translate(0, -4px);
+            }
+
+            &:nth-child(5) {
+                padding: 3px 5px;
+                transform: translate(-5px, -4px);
+            }
+        }
+
+        
     }
 
     .c-plan__tag3 {
         padding: 7px 16px 9px 17px;
+        @include sp {
+            padding: 3px 6px 4px;
+        }
 
         &:nth-child(2) {
             padding: 7px 13px 9px 19px;
+            @include sp {
+                padding: 3px 6px;
+            }
         }
     }
 
@@ -1007,6 +1388,10 @@
         color: #231815;
         font-feature-settings: "palt";
         line-height: 2.1;
+        @include sp {
+            font-size: 0.9rem;
+            line-height: 1;
+        }
     }
 
 }
@@ -1015,14 +1400,25 @@
     padding-top: 82px;
     padding-bottom: 110px;
     background-color: #ededed;
+    @include sp {
+        padding-top: 29px;
+        padding-bottom: 62px;
+    }
 
     .c-finance__title {
         transform: translateX(14px);
         margin-bottom: 72px;
+        @include sp {
+            transform: unset;
+            margin-bottom: 36px;
+        }
     }
 
     .c-title::after {
         bottom: -14px;
+        @include sp {
+            bottom: -7px;
+        }
     }
 
     .c-finance__subtitle {
@@ -1035,7 +1431,12 @@
         background-color: #231815;
         transform: translateX(17px);
         margin-bottom: 46px;
-
+        @include sp {
+            max-width: 205px;
+            height: 33px;
+            transform: unset;
+            margin-bottom: 23px;
+        }
     }
 
     .c-finance__subtitleText {
@@ -1047,18 +1448,39 @@
         text-align: center;
         transform: translate(0, -6px);
         letter-spacing: 0.02em;
+        @include sp {
+            font-size: 1.5rem;
+            transform: translate(0, -4px);
+        }
     }
 
     .c-finance__row {
         display: flex;
         justify-content: space-between;
         padding: 0 22px;
+        @include sp {
+            flex-direction: column;
+            padding: 0 36px;
+        }
     }
 
     .c-finance__item {
         width: 48%;
         max-width: 605px;
         background-color: #fff;
+        @include sp {
+            width: 100%;
+            margin-bottom: 28px;
+            margin: 0 auto 28px;
+
+            &:nth-child(2) {
+                margin-bottom: 0;
+
+                .c-finance__inner {
+                    padding-bottom: 50px;
+                }
+            }
+        }
     }
 
     .c-finance__inner {
@@ -1067,6 +1489,10 @@
         margin: 0 auto;
         padding: 100px 10px 55px;
         position: relative;
+        @include sp {
+            max-width: 237px;
+            padding: 49px 10px 26px;
+        }
     }
 
     .c-finance__content {
@@ -1076,6 +1502,11 @@
         color: #231815;
         letter-spacing: -0.5px;
         margin-bottom: 25px;
+        @include sp {
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 13px;
+        }
     }
 
     .c-finance__itemTitle {
@@ -1084,6 +1515,10 @@
         font-weight: 700;
         color: #231815;
         transform: translate(5px, -5px);
+        @include sp {
+            font-size: 1.3rem;
+            padding-top: 4px;
+        }
 
     }
 
@@ -1095,11 +1530,21 @@
         line-height: 1.2;
         letter-spacing: -0.03em;
         margin-bottom: 26px;
+        @include sp {
+            font-size: 4.5rem;
+            margin-bottom: 13px;
+            margin-top: -3px;
+        }
 
         .c-finance__unit {
             font-size: 3.6rem;
             margin-left: 10px;
-
+            @include sp {
+                font-size: 1.8rem;
+                margin-left: 7px;
+                display: inline-block;
+                transform: translate(0, 3px);
+            }
         }
     }
 
@@ -1108,7 +1553,10 @@
         font-size: 2.2rem;
         font-weight: 400;
         color: #231815;
-        
+        @include sp {
+            font-size: 1.1rem;
+            letter-spacing: 0.01em;
+        }
     }
 
     .c-finance__costbubble {
@@ -1129,6 +1577,11 @@
         @include pc1200 {
             right: -3%;
         }
+        @include sp {
+            width: 100px;
+            height: 100px;
+            right: -23%;
+        }
 
         &::before {
             position: absolute;
@@ -1140,7 +1593,10 @@
             left: 6px;
             transform: rotate(-129deg) translate(19px, -1px);
             transform: rotate(-129deg) translate(19px, -1px);
-
+            @include sp {
+                top: 66px;
+                left: 7px;
+            }  
         }
     }
 
@@ -1151,16 +1607,25 @@
         font-weight: 700;
         color: #fff;
         line-height: 1;
+        @include sp {
+            font-size: 1.6rem;
+        }
     }
 
     .c-finance__paymentnumber {
         display: inline-block;
         transform: translate(-4px, -6px);
+        @include sp {
+            transform: translate(-2px, -1px);
+        }
     }
 
     .c-finance__paymentunit {
         display: inline-block;
         transform: translate(4px, -16px);
+        @include sp {
+            transform: translate(2px, -6px);
+        }
     }
 
     .c-finance__paymentnumber {
@@ -1169,6 +1634,9 @@
         font-weight: 700;
         color: #fff;
         line-height: 1;
+        @include sp {
+            font-size: 4.8rem;
+        }
     }
 }
 

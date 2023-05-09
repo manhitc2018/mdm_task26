@@ -12,6 +12,9 @@ title
     letter-spacing: 0.1em;
     color: #000;
     position: relative;
+    @include sp {
+        font-size: 2.4rem;
+    }
 
     &::after {
         content: "";
@@ -19,6 +22,9 @@ title
         width: 58px;
         height: 1px;
         background-color: #231815;
+        @include sp {
+            width: 29px;
+        }
     }
 
     &.u-center::after {
